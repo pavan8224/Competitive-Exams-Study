@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indus Valley Civilization Quiz</title>
+  <style>
+    /* Hacker style CSS */
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0f0f0f;
+      color: #33ff33;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .quiz-container {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 255, 0, 0.3);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    #question {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    #options button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #33ff33;
+      border-radius: 4px;
+      background-color: #262626;
+      color: #33ff33;
+      cursor: pointer;
+    }
+    #options button.correct {
+      background-color: #00cc00;
+      color: #000;
+    }
+    #options button.wrong {
+      background-color: #cc0000;
+      color: #000;
+    }
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #333333;
+      color: #33ff33;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #next-btn:disabled {
+      background-color: #666666;
+      cursor: not-allowed;
+    }
+    #score-container.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Early Medival Period </h1>
+    <div id="question">Loading...</div>
+    <div id="options">
+      <!-- Options will be added dynamically -->
+    </div>
+    <button id="next-btn" disabled>Next</button>
+    <div id="score-container" class="hidden">
+      <h2>Your Score: <span id="score"></span></h2>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
+  <script src="emp.js"></script>
+</body>
+</html>

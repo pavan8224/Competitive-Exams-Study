@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - Hacker Style</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00FF00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Main container styling */
+        .container {
+            border: 2px solid #00FF00;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.7);
+            background-color: #1a1a1a;
+            width: 400px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #00FF00;
+            text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+            animation: glowingText 1.5s ease-in-out infinite alternate;
+        }
+
+        /* Glowing text animation */
+        @keyframes glowingText {
+            0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00; }
+            100% { text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00; }
+        }
+
+        /* Styling the action buttons */
+        .action-button {
+            display: block;
+            background-color: transparent;
+            color: #00FF00;
+            border: 2px solid #00FF00;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: pulseButton 1s ease-in-out infinite alternate;
+        }
+
+        /* Button hover effect */
+        .action-button:hover {
+            background-color: #00FF00;
+            color: #000;
+        }
+
+        /* Button pulse animation */
+        @keyframes pulseButton {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        /* RGB Disco effect for the Start Study button */
+        @keyframes rgbDisco {
+            0% { background-color: red; }
+            20% { background-color: yellow; }
+            40% { background-color: green; }
+            60% { background-color: blue; }
+            80% { background-color: purple; }
+            100% { background-color: red; }
+        }
+
+        .start-study-button {
+            animation: rgbDisco 1s infinite;
+        }
+
+        .small {
+            font-size: 1rem;
+            color: #ff6600;
+            margin-top: 20px;
+        }
+        a {
+          text-decoration: none
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pavan</h1>
+        <div class="terminal-text">
+            Welcome to Study App 
+             Start Study with Pavan
+        </div>
+        <a href="select subject.html">
+        <button class="action-button start-study-button">Start Study</button>
+        </a>
+        <p class="small">Select an option to begin...</p>
+    </div>
+
+    <script>
+        // Functions for button actions
+        function startQuiz() {
+            alert("Starting the Quiz...");
+        }
+    </script>
+</body>
+</html>
